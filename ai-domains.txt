@@ -1,19 +1,28 @@
 # Keystone Environmental
-# Unapproved public AI chat services
-# One hostname per line
+# Unapproved public AI services
+#
+# One hostname per line. Do not include http://, https://, URL paths, or wildcards.
+# This file is consumed by the Keystone N-Central HOSTS enforcement script.
+#
+# IMPORTANT:
+# Microsoft 365 Copilot endpoints are intentionally NOT listed here.
+# Keep this list focused on public AI services where Keystone data should not be submitted.
 
 # OpenAI / ChatGPT
 chatgpt.com
 www.chatgpt.com
 chat.openai.com
+platform.openai.com
 
-# Anthropic Claude
+# Anthropic / Claude
 claude.ai
 www.claude.ai
+console.anthropic.com
 
-# Google
+# Google Gemini / AI Studio / NotebookLM
 gemini.google.com
 aistudio.google.com
+notebooklm.google.com
 
 # Perplexity
 perplexity.ai
@@ -24,7 +33,7 @@ deepseek.com
 www.deepseek.com
 chat.deepseek.com
 
-# Grok
+# xAI / Grok
 grok.com
 www.grok.com
 
@@ -32,14 +41,25 @@ www.grok.com
 poe.com
 www.poe.com
 
-# Character AI
-character.ai
-www.character.ai
-
 # Meta AI
 meta.ai
 www.meta.ai
 alpha.meta.ai
 
-# Mistral Vibe / Le Chat
+# Character.AI
+character.ai
+www.character.ai
+
+# Mistral Le Chat
 chat.mistral.ai
+
+# Inflection Pi
+pi.ai
+
+# You.com
+you.com
+www.you.com
+
+# Phind
+phind.com
+www.phind.com
