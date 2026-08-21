@@ -1,0 +1,45 @@
+# Keystone Environmental
+# Unapproved public AI chat services
+# One hostname per line
+
+# OpenAI / ChatGPT
+chatgpt.com
+www.chatgpt.com
+chat.openai.com
+
+# Anthropic Claude
+claude.ai
+www.claude.ai
+
+# Google
+gemini.google.com
+aistudio.google.com
+
+# Perplexity
+perplexity.ai
+www.perplexity.ai
+
+# DeepSeek
+deepseek.com
+www.deepseek.com
+chat.deepseek.com
+
+# Grok
+grok.com
+www.grok.com
+
+# Poe
+poe.com
+www.poe.com
+
+# Character AI
+character.ai
+www.character.ai
+
+# Meta AI
+meta.ai
+www.meta.ai
+alpha.meta.ai
+
+# Mistral Vibe / Le Chat
+chat.mistral.ai
