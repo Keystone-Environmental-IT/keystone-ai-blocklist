@@ -4,62 +4,163 @@
 # One hostname per line. Do not include http://, https://, URL paths, or wildcards.
 # This file is consumed by the Keystone N-Central HOSTS enforcement script.
 #
+# Scope:
+# - Public generative-AI chat services
+# - AI playground/developer portals that allow prompts or data submission
+# - Direct AI API endpoints that could bypass the web-chat block
+#
+# Reference sources used for curation include Microsoft's Purview supported
+# generative-AI site inventory and Firewalla's public AI provider list.
+# This is intentionally a curated list rather than a wholesale third-party feed.
+#
 # IMPORTANT:
 # Microsoft 365 Copilot endpoints are intentionally NOT listed here.
-# Keep this list focused on public AI services where Keystone data should not be submitted.
+# Approved M365 Copilot services must remain accessible.
 
+# -----------------------------------------------------------------------------
 # OpenAI / ChatGPT
+# -----------------------------------------------------------------------------
 chatgpt.com
 www.chatgpt.com
 chat.openai.com
 platform.openai.com
+api.openai.com
 
+# -----------------------------------------------------------------------------
 # Anthropic / Claude
+# -----------------------------------------------------------------------------
 claude.ai
 www.claude.ai
+anthropic.com
+www.anthropic.com
 console.anthropic.com
+api.anthropic.com
 
+# -----------------------------------------------------------------------------
 # Google Gemini / AI Studio / NotebookLM
+# -----------------------------------------------------------------------------
 gemini.google.com
 aistudio.google.com
+generativelanguage.googleapis.com
+bard.google.com
 notebooklm.google.com
 
+# -----------------------------------------------------------------------------
+# Microsoft consumer Copilot
+# NOTE: This is NOT Microsoft 365 Copilot Chat.
+# -----------------------------------------------------------------------------
+copilot.microsoft.com
+
+# -----------------------------------------------------------------------------
 # Perplexity
+# -----------------------------------------------------------------------------
 perplexity.ai
 www.perplexity.ai
+api.perplexity.ai
 
+# -----------------------------------------------------------------------------
 # DeepSeek
+# -----------------------------------------------------------------------------
 deepseek.com
 www.deepseek.com
 chat.deepseek.com
+platform.deepseek.com
+api.deepseek.com
 
+# -----------------------------------------------------------------------------
 # xAI / Grok
+# -----------------------------------------------------------------------------
 grok.com
 www.grok.com
+grok.x.ai
+x.ai
+console.x.ai
+api.x.ai
 
+# -----------------------------------------------------------------------------
 # Poe
+# -----------------------------------------------------------------------------
 poe.com
 www.poe.com
 
+# -----------------------------------------------------------------------------
 # Meta AI
+# -----------------------------------------------------------------------------
 meta.ai
 www.meta.ai
 alpha.meta.ai
 
+# -----------------------------------------------------------------------------
 # Character.AI
+# -----------------------------------------------------------------------------
 character.ai
 www.character.ai
+c.ai
 
-# Mistral Le Chat
+# -----------------------------------------------------------------------------
+# Mistral / Le Chat
+# -----------------------------------------------------------------------------
+mistral.ai
+www.mistral.ai
 chat.mistral.ai
+console.mistral.ai
+api.mistral.ai
 
+# -----------------------------------------------------------------------------
 # Inflection Pi
+# -----------------------------------------------------------------------------
 pi.ai
+heypi.com
+inflection.ai
+www.inflection.ai
 
+# -----------------------------------------------------------------------------
+# Qwen
+# -----------------------------------------------------------------------------
+qwen.ai
+www.qwen.ai
+chat.qwen.ai
+qwenlm.ai
+www.qwenlm.ai
+
+# -----------------------------------------------------------------------------
 # You.com
+# -----------------------------------------------------------------------------
 you.com
 www.you.com
 
+# -----------------------------------------------------------------------------
 # Phind
+# -----------------------------------------------------------------------------
 phind.com
 www.phind.com
+
+# -----------------------------------------------------------------------------
+# OpenRouter
+# Public model chat/playground and API aggregation service
+# -----------------------------------------------------------------------------
+openrouter.ai
+www.openrouter.ai
+api.openrouter.ai
+
+# -----------------------------------------------------------------------------
+# Groq
+# AI developer console/playground and API
+# -----------------------------------------------------------------------------
+console.groq.com
+api.groq.com
+
+# -----------------------------------------------------------------------------
+# DuckDuckGo AI Chat
+# -----------------------------------------------------------------------------
+duck.ai
+www.duck.ai
+
+# -----------------------------------------------------------------------------
+# Known limitations of HOSTS-based enforcement
+# -----------------------------------------------------------------------------
+# Some AI functionality is hosted as a URL path on a broader business domain.
+# Windows HOSTS cannot block a URL path without blocking the entire hostname.
+# Examples include services embedded within broad platforms such as search,
+# productivity, social-media, or developer sites. Those require a URL-aware
+# web filter or DLP control if Keystone later needs to block them selectively.
