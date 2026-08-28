@@ -1,0 +1,55 @@
+# Keystone Environmental
+# Browser-only AI URL rules
+#
+# Purpose:
+# This file contains URL/path rules that cannot be safely expressed in the
+# Windows HOSTS file because the AI feature is hosted on a broader legitimate
+# domain that Keystone does not want to block entirely.
+#
+# The local Keystone AI policy script will combine:
+#   1. ai-domains.txt      -> domain blocking for HOSTS + browser policies
+#   2. browser-extra.txt   -> browser policies only
+#
+# Canonical syntax:
+# Use Chromium/Edge URLBlocklist-style filters:
+#   [scheme://][.]host[:port][/path][@query]
+#
+# Do NOT add a trailing * to URL paths. Chromium/Edge URLBlocklist path rules
+# already work as path-prefix matches. The runtime script will translate these
+# rules as needed for browsers such as Firefox.
+#
+# IMPORTANT:
+# - Do not put whole-domain AI services here. Put those in ai-domains.txt.
+# - Do not block broad business domains (for example github.com, bing.com, x.com)
+#   when only an AI path needs to be restricted.
+# - Microsoft 365 Copilot work/education endpoints must remain accessible.
+
+# -----------------------------------------------------------------------------
+# Microsoft consumer Copilot experiences hosted on Bing
+# Microsoft identifies these as personal/consumer Copilot entry points.
+# Blocking all of bing.com would be inappropriate, so these are browser-only.
+# -----------------------------------------------------------------------------
+bing.com/chat
+bing.com/copilotsearch
+
+# -----------------------------------------------------------------------------
+# GitHub Copilot Chat on github.com
+# GitHub documents https://github.com/copilot as the web Copilot Chat entry.
+# Do not block github.com itself.
+# -----------------------------------------------------------------------------
+github.com/copilot
+
+# -----------------------------------------------------------------------------
+# Grok embedded in X
+# Grok is also available through dedicated xAI/Grok domains in ai-domains.txt.
+# This rule covers the Grok experience hosted inside the broader x.com site.
+# Do not block x.com itself.
+# -----------------------------------------------------------------------------
+x.com/i/grok
+
+# -----------------------------------------------------------------------------
+# Future additions
+# -----------------------------------------------------------------------------
+# Add path/query-specific AI experiences here when they are hosted on a domain
+# Keystone still needs for legitimate business use. Each addition should be
+# validated in Edge/Chrome and translated/tested for Firefox before production.
