@@ -20,17 +20,15 @@
 #
 # IMPORTANT:
 # - Do not put whole-domain AI services here. Put those in ai-domains.txt.
+# - Every active entry here must include both a hostname and a path.
 # - Do not block broad business domains (for example github.com, bing.com, x.com)
 #   when only an AI path needs to be restricted.
 # - Microsoft 365 Copilot work/education endpoints must remain accessible.
-
-# -----------------------------------------------------------------------------
-# Microsoft consumer Copilot experiences hosted on Bing
-# Microsoft identifies these as personal/consumer Copilot entry points.
-# Blocking all of bing.com would be inappropriate, so these are browser-only.
-# -----------------------------------------------------------------------------
-bing.com/chat
-bing.com/copilotsearch
+#
+# Microsoft currently documents bing.com/chat and bing.com/copilotsearch as
+# possible Microsoft 365 Copilot Chat entry points for work/education users.
+# They are therefore intentionally NOT blocked here; URL filtering cannot
+# reliably distinguish personal vs Entra-backed use on the same URL.
 
 # -----------------------------------------------------------------------------
 # GitHub Copilot Chat on github.com
